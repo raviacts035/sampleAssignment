@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS sample</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            background-color: darkblue;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        main{
+            border-radius: 8px;
+            height: 300px;
+            width: 500px;
+            margin: auto;
+        }
+
+        .upper{
+            background-color: #FACC15;
+            height: 80%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .text{
+            color: white;
+            font-family: sans-serif;
+            font-weight: bold;
+        }
+
+        .circle{
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            background-color: rgba(0,0,0,0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .lower {
+            background-color:#F43F5E;
+            height: 20%;
+            width: 100%;
+            position:relative;
+        }
+
+        .lower::before{
+            content: "";
+            /* background-color: yellow; */
+
+            border-top-color: #FACC15;
+            border-left-color: transparent;
+            border-right-color: transparent;
+            border-bottom-color: transparent;
+
+            border-width: 2rem;
+            border-style: solid;
+
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, 0%);
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section class="upper">
+            <p class="text">Pinak Idea Lab</p>
+            <!-- Circle -->
+            <div class="circle">:)</div>
+        </section>
+        <section class="lower"></section>
+    </main>
+</body>
+</html>
